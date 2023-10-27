@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Rotiseria el gringo</title>
+</head>
+<body>
+    <h1>Rotiseria el gringo</h1>
+    <div>
+        <h2>Configurar Tu Plato</h2>
+        <div>
+            <div>
+                <label for="">Fecha de pedido</label>
+                <p id="fecha_pedido" disabled></p>
+            </div>
+            <div>
+                <label for="fecha">Seleccione el Plato</label>
+                <select name="plato" id="plato">
+                    <option value="Hamburgesa Doble Carne">Hamburgesa Doble Carne</option>
+                    <option value="Hamburguesa Comun">Hamburguesa Comun</option>
+                    <option value="Hamburguesa Infantil">Hamburguesa Infantil</option>
+                </select>
+                <button onclick="agregarPlato();">Agregar</button>
+            </div>
+            <div>
+                <label for="fecha">Agregar ingredientens adicionales</label>
+                <select name="ingrediente" id="ingrediente" disabled>
+                    <option value="Papas">Papas</option>
+                    <option value="Cebollas">cebollas</option>
+                    <option value="Aderesos">Aderesos</option>
+                </select>
+                <button onclick="agregarIngrediente();" id = "boton_ingrediente" disabled>Agregar</button>
+            </div>
+            <div>
+                <form action="" id="formulario">
+                <label for="">Tabla de Items a solicitar</label>
+                <table id="items_a_solicitar">
+                    <tr>
+                      <th>Item Incluidos</th>
+                      <th>Cantidad</th>
+                      <th>Precio</th>
+                      <th>Acciones</th>
+                    </tr>
+                    <tr>
+                      <td>Hamburguesa Comun</td>
+                      <td></td>
+                      <td>$1000</td>
+                      <td><button>Eliminar</button></td>
+                    </tr>
+                    <tr>
+                      <td>cebollas</td>
+                      <td></td>
+                      <td>$500</td>
+                      <td><button onclick="eliminarItem();">Eliminar</button></td>
+                    </tr>
+                </table>
+                <label>Total = $ <p id="total"></p></label>
+                <button onclick="agregarCarritos();">Enviar al carrito</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
